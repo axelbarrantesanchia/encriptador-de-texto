@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #010004;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #604CC3;
+    --color-hover: #f6f6f6;
+
+    --fuente-montserrat: "Montserrat", sans serif;
+    --fuente-krona: "Krona One", sans serif:
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: var(--color-terciario);
+    color: #f6f6f6;
+    box-sizing: border-box;
+    height: 100vh;
+    box-sizing: border-box;
+}
+strong {
+    color: rgb(0, 0, 0);
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    margin: 4%;
+    justify-content: space-between;
+}
+.presentacion__contenido {
+    width: 610;
+}
+
+.titulo__encriptador{
+    font-family: var(--fuente-montserrat);
+}
+
+
+.presentacion__contenido__contenido{
+    font-size: 26px;
+}
+
+.parrafo__principal{
+    font-family: var(--fuente-krona);
+    font-size: 20px;
+
+}
+.parrafo__secundario{
+    font-family: var(--fuente-krona);
+    font-size: 20px;
+}
