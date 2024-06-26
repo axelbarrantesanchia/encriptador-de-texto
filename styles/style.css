@@ -3,7 +3,7 @@
 :root{
     --color-primario: #010004;
     --color-secundario: #f6f6f6;
-    --color-terciario: #604CC3;
+    --color-terciario: #4936ad;
     --color-hover: #f6f6f6;
 
     --fuente-montserrat: "Montserrat", sans serif;
@@ -15,41 +15,94 @@
     margin: 0;
 }
 body {
-    background-color: var(--color-terciario);
+    background-color: var(--color-primario);
     color: #f6f6f6;
     box-sizing: border-box;
-    height: 100vh;
-    box-sizing: border-box;
-}
-strong {
-    color: rgb(0, 0, 0);
+    height: 100vh; /* Asegúrate de que ocupe toda la altura de la pantalla */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 .principal {
     display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Alinea los elementos al centro */
     align-items: center;
-    margin: 4%;
+    margin: 5%;
     justify-content: space-between;
+    gap: 20px; /* Espacio entre los elementos */
 }
 .presentacion__contenido {
     width: 610;
 }
 
-.titulo__encriptador{
+.parrafo__principal{
     font-family: var(--fuente-montserrat);
+    font-size: 36px;
 }
 
 
 .presentacion__contenido__contenido{
-    font-size: 26px;
+    font-family: var(--fuente-krona);
+    font-size: 36px;
 }
 
-.parrafo__principal{
-    font-family: var(--fuente-krona);
-    font-size: 20px;
-
+.imagen__logo{
+    position: absolute; /* Posición absoluta para colocar en la esquina */
+    top: 0;             /* Alineación en la parte superior */
+    left: 0;            /* Alineación en la parte izquierda */
+    margin: 10px;       /* Margen opcional para separar un poco de los bordes */
+    width: 200px;       /* Ajusta el tamaño según tus necesidades */
+    height: auto;       /* Mantiene la proporción del logo */
+    
 }
-.parrafo__secundario{
-    font-family: var(--fuente-krona);
-    font-size: 20px;
+.input__texto{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.salida__texto{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.botones_estilo {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000; /* Color de fondo morado */
+    color: #ffffff; /* Color del texto blanco */
+    border: 1px solid #ffffff; /* Borde blanco de 2px */
+    border-radius: 8%; /* Bordes redondeados */
+    text-align: center;
+    text-decoration: none;
+    gap:  12px;
+}
+
+.botones_estilo:hover{
+    color: var(--color-hover); /* Color del texto al pasar el cursor */
+    background-color: var(--color-hover); /* Color de fondo al pasar el cursor */
+    border-radius: 4px; /* Radio de borde para el efecto de fondo */
+}
+
+
+.salida__texto {
+    width: calc(100% - 20px); /* Ancho ajustado para el padding */
+    height: calc(100% - 20px); /* Altura ajustada para el padding */
+    resize: none; /* Evita que el usuario redimensione el textarea */
+    border: none; /* Sin borde adicional en el textarea */
+    outline: none; /* Sin contorno de enfoque */
+    padding: 10px; /* Espacio interior para el texto */
+    font-size: 14px; /* Tamaño de fuente */
 }
