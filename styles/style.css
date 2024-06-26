@@ -1,108 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+:root {
     --color-primario: #010004;
     --color-secundario: #f6f6f6;
     --color-terciario: #4936ad;
     --color-hover: #f6f6f6;
 
-    --fuente-montserrat: "Montserrat", sans serif;
-    --fuente-krona: "Krona One", sans serif:
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
 }
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
 body {
     background-color: var(--color-primario);
-    color: #f6f6f6;
-    box-sizing: border-box;
-    height: 100vh; /* Asegúrate de que ocupe toda la altura de la pantalla */
-    margin: 0;
+    color: var(--color-secundario);
+    height: 100vh;
     display: flex;
-    flex-direction: column; /* Coloca los elementos en una columna */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: relative; /* Asegura que la posición relativa se aplique al contenedor */
+}
+
+.imagen__logo {
+    position: absolute; /* Posición absoluta para colocar en la esquina */
+    top: 10px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la parte izquierda */
+    margin: 10px; /* Margen opcional para separar un poco de los bordes */
+    width: 200px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción del logo */
 }
 
 .principal {
-    display: flex;
-    flex-direction: column; /* Coloca los elementos en una columna */
-    align-items: center; /* Alinea los elementos al centro */
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 40px; /* Espacio entre las columnas */
+    justify-items: center; /* Centra los elementos dentro de las columnas */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
     margin: 5%;
-    justify-content: space-between;
-    gap: 20px; /* Espacio entre los elementos */
-}
-.presentacion__contenido {
-    width: 610;
 }
 
-.parrafo__principal{
-    font-family: var(--fuente-montserrat);
-    font-size: 36px;
-}
-
-
-.presentacion__contenido__contenido{
+.presentacion__contenido__contenido {
     font-family: var(--fuente-krona);
     font-size: 36px;
 }
 
-.imagen__logo{
-    position: absolute; /* Posición absoluta para colocar en la esquina */
-    top: 0;             /* Alineación en la parte superior */
-    left: 0;            /* Alineación en la parte izquierda */
-    margin: 10px;       /* Margen opcional para separar un poco de los bordes */
-    width: 200px;       /* Ajusta el tamaño según tus necesidades */
-    height: auto;       /* Mantiene la proporción del logo */
-    
+.parrafo__principal {
+    font-family: var(--fuente-montserrat);
+    font-size: 36px;
 }
-.input__texto{
+.parrafo__secundario {
+    font-family: var(--fuente-montserrat);
+    font-size: 20px;
+}
+
+.input__texto {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-.salida__texto{
-    width: 100%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 22px;
 }
 
 .botones_estilo {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #000000; /* Color de fondo morado */
-    color: #ffffff; /* Color del texto blanco */
-    border: 1px solid #ffffff; /* Borde blanco de 2px */
-    border-radius: 8%; /* Bordes redondeados */
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 8%;
     text-align: center;
     text-decoration: none;
-    gap:  12px;
+    margin: 0 5px; /* Espacio entre los botones */
 }
 
-.botones_estilo:hover{
-    color: var(--color-hover); /* Color del texto al pasar el cursor */
-    background-color: var(--color-hover); /* Color de fondo al pasar el cursor */
-    border-radius: 4px; /* Radio de borde para el efecto de fondo */
+.botones_estilo:hover {
+    color: var(--color-hover);
+    background-color: var(--color-hover);
+    border-radius: 4px;
 }
 
+.col1 {
+    grid-column: 1 / 2; /* Coloca col1 en la primera columna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col2 {
+    grid-column: 2 / 3; /* Coloca col2 en la segunda columna */
+}
 
 .salida__texto {
-    width: calc(100% - 20px); /* Ancho ajustado para el padding */
-    height: calc(100% - 20px); /* Altura ajustada para el padding */
-    resize: none; /* Evita que el usuario redimensione el textarea */
-    border: none; /* Sin borde adicional en el textarea */
-    outline: none; /* Sin contorno de enfoque */
-    padding: 10px; /* Espacio interior para el texto */
-    font-size: 14px; /* Tamaño de fuente */
+    width: 400px; /* Ancho según el valor proporcionado */
+    height: 500px ; /* Altura según el valor proporcionado */
+    padding: 32px; /* Padding según el borde proporcionado */
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
