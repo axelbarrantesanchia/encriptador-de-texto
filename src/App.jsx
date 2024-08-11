@@ -39,13 +39,23 @@ function App() {
   };
 
   const Copiar = () => {
-    navigator.clipboard.writeText(result).then(() => {
-      alert('Texto copiado al portapapeles');
-    }).catch((err) => {
+    const textArea = document.createElement("textarea");
+    textArea.value = result;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+      const successful = document.execCommand('copy');
+      alert(successful ? 'Texto copiado al portapapeles' : 'No se pudo copiar el texto.');
+    } catch (err) {
       console.error('Error al copiar el texto: ', err);
-      alert('No se pudo copiar el texto. Asegúrate de que el navegador permita el acceso al portapapeles.');
-    });
+      alert('No se pudo copiar el texto.');
+    }
+  
+    document.body.removeChild(textArea);
   };
+  
 
   return (
     <main className="bg-black min-h-screen flex items-center justify-center p-4">
